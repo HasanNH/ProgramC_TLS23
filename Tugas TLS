@@ -1,0 +1,49 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(){
+    double a,b,c,hasil,r;
+    cout << "Luas Bangun Datar Yang Ingin Dihitung:\n";
+    cout << "1. Lingkaran\n";
+    cout << "2. Persegi\n";
+    cout << "3. Persegi Panjang\n";
+    cout << "4. Segitiga\n";
+    cout << "5. Jajar Genjang\n";
+    cout << "6. Trapesium\n";
+    cout << "Masukkan Pilihan: "; cin >> c; cout << "\n";
+    if(c==2){
+        cout << "Sisi: "; cin >> a;
+        hasil = a*a;
+        cout << "luas Persegi: " << hasil << endl;
+    } else if(c==3){
+        cout << "Panjang: "; cin >> a;
+        cout << "Lebar: "; cin >> b;
+        hasil = a*b;
+        cout << "Luas Persegi Panjang: " << hasil << endl;
+    } else if(c==4){
+        cout << "Alas: "; cin >> a;
+        cout << "Tinggi: "; cin >> b;
+        hasil = a*b/2;
+        cout << "Luas Segitiga: " << hasil << endl;
+    } else if(c==5){
+        cout << "Alas: "; cin >> a;
+        cout << "Tinggi: "; cin >> b;
+        hasil = a*b;
+        cout << "Luas Jajar Genjang" << hasil << endl;
+    } else if(c==6){
+        cout << "Panjang Atas: "; cin >> a;
+        cout << "Panjang Bawah: "; cin >> b;
+        cout << "Tinggi: "; cin >> r;
+        hasil = (a+b)*c/2;
+        cout << "Luas Jajar Genjang: " << hasil << endl;
+    } else if(c==1){
+        cout << "Jari-Jari: "; cin >> a;
+        hasil = a*a*M_PI;
+        cout << "Luas Lingkaran: " << hasil << endl;;
+    } else {
+        cout << "Bangun Datar Tidak Ada\n";
+        cout << "Pilih Ulang\n\n";
+        return main();
+    }
+    return 0;
+}
